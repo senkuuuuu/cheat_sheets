@@ -6,7 +6,7 @@
   ![Build Status](https://img.shields.io/badge/build-WIP-yellowgreen)
   ![License](https://img.shields.io/badge/license-MIT-blue)
   ![Language](https://img.shields.io/badge/Python3-100%25-blue)
-  ![Issues](https://img.shields.io/badge/issues-%20closed-red)
+  ![Issues](https://img.shields.io/badge/issues-%20open-green)
 
   <br>
 </div>
