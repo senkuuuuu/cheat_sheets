@@ -51,6 +51,7 @@ python3 --version
 
 ---
 
+
 ## 🛠️ Tools and Libraries
 
     Pandas: Data manipulation and analysis.
@@ -59,14 +60,18 @@ python3 --version
     Requests: HTTP requests for API calls.
 
 
+---
 
-📜 License
+
+## 📜 License
 
 This project is licensed under the MIT License.
 
+
 ---
 
-📝 Contributing
+
+## 📝 Contributing
 
 Contributions are welcome! Follow these steps:
 
