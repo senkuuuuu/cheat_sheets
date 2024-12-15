@@ -75,10 +75,10 @@ This project is licensed under the MIT License.
 
 Contributions are welcome! Follow these steps:
 
-    Fork the repository.
-    Create a feature branch: git checkout -b new-feature.
-    Commit your changes: git commit -m "Add some feature".
-    Push to the branch: git push origin new-feature.
-    Submit a pull request.
+    1. Fork the repository.
+    2. Create a feature branch: git checkout -b new-feature.
+    3. Commit your changes: git commit -m "Add some feature".
+    4. Push to the branch: git push origin new-feature.
+    5. Submit a pull request.
 
 <div align="center"> <h3>🚀 Build Faster and Smarter with Python CheatSheet!</h3> </div>
