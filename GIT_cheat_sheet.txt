@@ -1,0 +1,59 @@
+======================================  BASICS ====================================== 
+
+--CREATING LOCAL GIT REPOSITORY--
+	git init
+
+--SAVING FILES IN LOCAL GIT REPOSITORY--
+	git add . (to add all)
+	git add <file_name>
+	
+--COMMITING CHANGES IN GIT REPOSITORY--
+	git commit -m "commit titile"
+	
+--CONNECTING REMOTE GIT REPOSITORY TO LOCAL GIT REPOSITORY--
+	remote add origin <repository-url>
+
+--PUSHING GIT LOCAL REPOSITORY TO REMOTE GIT REPOSITORY--
+	--FIRST TIME--
+		git push -u origin main
+	--SECOND TIME OR MORE--
+		git push
+	--IF YOU WANT TO FORCE A PUSH--
+		why: this happens when you encounter a merge conflict in local and remote
+		git push origin main --force
+
+======================================  BRANCHES ====================================== 
+what: Git branches refers to other versions of your root saved in your local repo
+why: we use git branches in order to make implementations without affecting main files
+
+--CREATING GIT BRANCH--
+	git branch <branch_name>
+
+--CHECKING AVAILABLE BRANCHES IN LOCAL GIT REPOSITORY--
+	git branch
+
+--SWITCHING FROM MAIN BRANCH TO OTHER BRANCHES--
+	git switch <branch_name>
+
+======================================  MERGING ====================================== 
+--MERGING GIT BRANCH TO MAIN--
+	NOTE: switch to main first
+	git merge <branch_name>
+
+--ABORTING MERGE--
+	git merge --abort
+
+======================================  COMMIT HISTORY ====================================== 
+--CHECKING COMMIT HISTORY--
+	git log
+
+--GOING BACK AND SAVING PAST COMMITS--
+	step_1: create a seperate branch
+	step_2: switch to the new branch
+	step_3: use git checkout <commit-hash>
+	step_4: use git add .
+	step_5: use git commit -m "commit titile"
+
+	
+
+	

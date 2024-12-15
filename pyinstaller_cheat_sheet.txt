@@ -1,0 +1,85 @@
+========================================  INSTALLATION AND BASIC FLAGS ========================================
+
+--INSTALLATION OF PYINSTALLER--
+	pip install pyinstaller
+
+--PACKAGE THE ROOT INTO A SINGLE EXE--
+	--onefile
+	
+--ADDING FILES OR FOLDER TO THE EXE COMPILATION--
+	--IF SINGLE FILE--
+		--add-data "file-relative-path;."
+	--IF A FOLDER--
+		--add-data "folder-relative-path;folder-relative-path"
+
+--ADDING ICON TO THE EXE--
+	--add-icon=icon.ico
+
+--MODIFYING EXE NAME--
+	--name=exe_name
+
+--REMOVE/SUPRESS TERMINAL WHEN RUNNING--
+	--windowed
+
+========================================  IMPLEMENTATION ======================================== 
+
+step_1: navigate to the root of your project using cd
+step_2: open venv if your environment uses venv
+step_3: install pyinstaller using pip install pyinstaller
+step_4: run  pyinstaller --onefile (some flags..) main.py
+
+========================================  TEMPLATES  ========================================
+
+--IF SINGLE FILE AND NO RESOURCES (WITH TERMINAL)--	 
+	pyinstaller --onefile --name=app_name --icon=icon.ico main.py
+
+--IF HAS RESOURCES (WITH TERMINAL)--
+	pyinstaller --onefile --name=app_name --icon=icon.ico --add-data "resources;resources" main.py
+
+--IF SINGLE FILE BUT SUPRESSED TERMINAL--
+	pyinstaller --onefile --name=app_name --icon=icon.ico --windowed main.py
+
+--IF HAS RESOURCES BUT SUPRESSED TERMINAL--
+	pyinstaller --onefile --name=app_name --icon=icon.ico --add-data "resources;resources" --windowed main.py
+
+========================================  IMPORTANT NOTES AND ISSUES ========================================
+
+--COMMON ISSUE 1--
+	When a root that is to be compiled into .exe has resources folder, even if you did --add-data "resources;resources"
+	those resources won't be accessible to your .exe unless the resources are called in the main.py correctly, taking
+	into account the fact that the root has been compiled into .exe
+
+--REASON FOR ISSUE 1--
+	if you call a resource normally (meaning using normal filepath format) in your code base, then if you compile that
+	code base into .exe these calls will not work, this is because you need to take into account that the root has been 
+	compiled into .exe and resources added using --add-data "resources;resources" is saved differently than normal thus
+	they have different file paths
+
+
+--SOLUTION FOR ISSUE 1--
+	to get around this issue, simply call the resource path while taking into account if the root is compiled into .exe
+	you can do this by using the function below
+	
+	import os
+	import sys
+	
+	
+	class convert:
+	    def get_resource_path(self, relative_path):
+	        base_path = getattr(sys, '_MEIPASS', os.path.abspath("."))
+	        file_path = os.path.join(base_path, relative_path)
+	        return file_path
+	
+
+
+
+
+
+
+
+
+
+
+
+	
+
